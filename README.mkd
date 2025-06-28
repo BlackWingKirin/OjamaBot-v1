@@ -1,0 +1,30 @@
+# Pasos para instalar y ejecutar el proyecto
+
+En github clona el repositorio de esta URL https://github.com/OjamaKnight/OjamaBot-v1.git
+
+```bash
+git clone https://github.com/OjamaKnight/OjamaBot-v1.git
+
+```
+
+## Create venv 
+```bash
+python -m venv name_project
+
+```
+
+## Activate
+
+```bash
+
+name_project/Scripts/Activate.ps1
+
+```
+
+## Install FastAPI
+
+```bash
+
+pip install "fastapi[standard]"
+
+```
