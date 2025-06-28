@@ -27,11 +27,18 @@ async def query():
 
 @app.post("/Bot")
 async def bot_request(query : Bot):
-    print("Response aca")
     question=query.query
+    print(type(question))
     message=[SystemMessage(content=prompt),
              HumanMessage(content=question)]
-    print(query.query)
-    response=model.invoke(message[-1])
-    message.append(response.content)
-    return message[-1]
+    
+    print(f"Pregunta {query.query}")
+    print(f"Lista de mensaje {message}")
+
+    response=model.invoke(message)
+
+    print(f"Respuesta {response}")
+    message.append(response)
+    
+    print(f"Lista Actualizada {message}")
+    return message[-1].content
